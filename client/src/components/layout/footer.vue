@@ -5,8 +5,8 @@
       <p class="">
         <font color="#808080"
         >{{ $t("powered-by-1")}}
-        <a href="https://github.com/SeeDAO-OpenSource/seedaogov"
-          ><font color="#808080">SeeDAO {{ $t("powered-by-2")}}</font></a
+        <a href="https://github.com/SeeDAO-OpenSource/octopus3"
+          ><font color="#808080">Octopus3 {{ $t("powered-by-2")}}</font></a
         >
         &nbsp;❤&nbsp;{{ $t("supported-by-1")}}
         <a href="https://discord.gg/GREQRVSTE4"
