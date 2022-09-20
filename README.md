@@ -1,6 +1,6 @@
-# Octopus3
+# 🐙Octopus3
 
-SeeDAO 市政厅治理后台项目 Octopus3, 使用 Vue2 + Express (Nodejs)
+SeeDAO 市政厅治理后台公共项目 Octopus3, 使用 Vue2 + Express (Nodejs)
 
 ## Frontend
 
