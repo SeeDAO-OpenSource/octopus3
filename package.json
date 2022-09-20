@@ -1,7 +1,7 @@
 {
-  "name": "seedaogov",
+  "name": "octopus3",
   "version": "1.0.0",
-  "description": "SeeDAOGov Server written with Express.js",
+  "description": "SeeDAO Governance server written with Express.js",
   "main": "server/index.ts",
   "directories": {
     "doc": "docs",
