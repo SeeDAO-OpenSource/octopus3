@@ -1,32 +1,33 @@
-Issue tracker is **ONLY** used for reporting bugs. New features should be discussed on our slack channel. Please use [stackoverflow](https://stackoverflow.com) for supporting issues.
+---
+name: "🐛 错误回报"
+about: "我发现了一个错误，希望开发团队给予协助 (✋并且愿意主动提供完整信息)!"
+title: ''
+labels: 'i: bug, i: help wanted'
+assignees: ''
 
-<!--- Provide a general summary of the issue in the Title above -->
+---
 
-## Expected Behavior
-<!--- Tell us what should happen -->
+本模版 **仅允许** 被用于错误回报. 新的需求或是给予项目支持请选择其他 Issue 模版，也欢迎到 [SeeDAO Discord 开发者公会](https://discord.com/channels/841189467128594442/918351013952503868) 直接进行讨论。
 
-## Current Behavior
-<!--- Tell us what happens instead of the expected behavior -->
+<!---请在此大致简单摘要你遇到的问题是什么，以及需要什么帮助 -->
 
-## Possible Solution
-<!--- Not obligatory, but suggest a fix/reason for the bug, -->
+## 期望的行为
+<!--- 请告诉我们你原本期待代码或程序以什么行为继续运行 -->
 
-## Steps to Reproduce
-<!--- Provide a link to a live example, or an unambiguous set of steps to -->
-<!--- reproduce this bug. Include code to reproduce, if relevant -->
+## 当前的状况
+<!--- 请告诉我们你现在遇到的真实情况又是如何 -->
+
+## 可能的解法
+<!--- 选填, 如果你擅长开发也可以提出你认为合适的解决思路 -->
+
+## 如何重现你遇到的错误
+<!--- 针对你遇到的具体问题, 描述一个具体的场景与情境, 并且一步步说明你怎么遇到问题 -->
+<!--- 尽可能提供足够的信息让他人能重现这个错误, 可以提供代码/屏幕截图 -->
 1.
 2.
 3.
 4.
 
-## Context (Environment)
-<!--- How has this issue affected you? What are you trying to accomplish? -->
-<!--- Providing context helps us come up with a solution that is most useful in the real world -->
-
-<!--- Provide a general summary of the issue in the Title above -->
-
-## Detailed Description
-<!--- Provide a detailed description of the change or addition you are proposing -->
-
-## Possible Implementation
-<!--- Not obligatory, but suggest an idea for implementing addition or change -->
+## 使用场景 (开发与使用环境)
+<!--- 这个错误发生对你的影响是什么, 对你当前的需求有多大的影响? -->
+<!--- 提供更多的信息能帮助我们以最能解决现实需求的方式, 来解决这个问题 -->

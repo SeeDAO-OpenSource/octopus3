@@ -1,23 +1,22 @@
 ---
-name: "\U0001F680 Feature Request"
-about: "I have a suggestion (and may want to implement it \U0001F642)!"
+name: "\U0001F680 提交需求"
+about: "我有一个更好的建议 (同时我也可能有兴趣参与实作 \U0001F642)!"
 title: ''
-labels: 'i: enhancement, i: needs triage'
+labels: 'i: enhancement'
 assignees: ''
 
 ---
 
-## Feature Request
+## 提交需求
 
-**Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I have an issue when [...]
+**如果你的需求是为了解决某个问题, 请先简要描述你现在遇到的问题**
+<!--- 可以使用 "当我......时,我想要..." 来更加具体的描述你的问题 -->
 
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen. Add any considered drawbacks.
+**请描述你想要的解决方案**
+<!--- 对你想要的东西进行简洁明了的叙述，有必要也请补充这样做可能造成的缺点 -->
 
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
+**请描述如果没有此功能, 你有何替代选择 (选填)**
+<!--- 如果这个功能没有实现, 例如现在, 你可能的其他替代选择或权宜之计是什么 -->
 
-**Teachability, Documentation, Adoption, Migration Strategy**
-If you can, explain how users will be able to use this and possibly write out a version the docs.
-Maybe a screenshot or design?
+**简要撰写这个新功能的文档 (选填)**
+<!--- 如果可以, 请简要的描述使用者会如何使用这个新功能, 可以是一些截图或流程图, 并可作为文档 -->
