@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import i18n from '../i18n';
 
+import activity from './activity.module';
 import wallet from './wallet.module';
 import treasury from './treasury.module';
 import governor from './governor.module';
@@ -93,6 +94,7 @@ export default new Vuex.Store({
     modules: {
         wallet,
         treasury,
-        governor
+        governor,
+        activity
     }
 });

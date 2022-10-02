@@ -13,6 +13,7 @@ export const SET_PROVIDER = "setProvider"
 
 // Getters
 export const GET_WALLET_SHORT_ADDRESS = "getWalletShortAddress"
+export const GET_WALLET_ADDRESS = "getWalletAddress"
 export const GET_ACTIVE = "getActive"
 export const GET_ACCOUNT = "getAccount"
 export const GET_CHAIN_ID = "getChainId"
@@ -44,6 +45,9 @@ const getters = {
     const addr = state.wallet.metaMaskAddress
     if (addr === undefined || addr === "") return ""
     return addr.slice(0, 5) + "..." + addr.slice(addr.length - 5, addr.length)
+  },
+  [GET_WALLET_ADDRESS](state){
+    return state.wallet.metaMaskAddress;
   }
 }
 

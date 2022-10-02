@@ -60,6 +60,9 @@
               >
                 <a>{{ $t("dashboard") }}</a>
               </router-link>
+              <router-link tag="li" to="/my/profile" @click.native="toggleMobileMenu">
+                <a>{{ $t("my-profile") }}</a>
+              </router-link>
               <router-link tag="li" to="/my/credits" @click.native="toggleMobileMenu">
                 <a>{{ $t("my-credits") }}</a>
               </router-link>
@@ -109,6 +112,12 @@
           </a>
           <b-collapse id="services" accordion="menu">
             <ul class="collapse submenu list-unstyled show">
+              <router-link
+                tag="li"
+                to="/services/checkin"
+                @click.native="toggleMobileMenu"
+                ><a>{{ $t("activity-checkin") }}</a></router-link
+              >
               <router-link
                 tag="li"
                 to="/services/sgn"
@@ -601,8 +610,8 @@
           </b-collapse>
         </li>
 
-        
-          <!-- <li class="menu">
+        <!-- start -->
+         <li class="menu">
           <a href="#app" v-b-toggle class="dropdown-toggle" @click.prevent>
             <div class="">
               <svg
@@ -1737,7 +1746,7 @@
               <span>{{ $t("documentation") }}</span>
             </div>
           </a>
-        </li> -->
+        </li> 
 
       </perfect-scrollbar>
     </nav>

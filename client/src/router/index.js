@@ -17,6 +17,11 @@ const routes = [
         component: () => import(/* webpackChunkName: "components-tabs" */ '../views/home/dashboard.vue')
     },
     {
+        path: '/my/profile',
+        name: 'my-profile',
+        component: () => import(/* webpackChunkName: "components-tabs" */ '../views/home/myProfile.vue')
+    },
+    {
         path: '/my/credits',
         name: 'my-credits',
         component: () => import(/* webpackChunkName: "components-tabs" */ '../views/home/myCredits.vue')
@@ -32,6 +37,11 @@ const routes = [
         path: '/services/sgn',
         name: 'sgn-service',
         component: () => import(/* webpackChunkName: "components-tabs" */ '../views/services/sgn.vue')
+    },
+    {
+        path: '/services/checkin',
+        name: 'checkin-service',
+        component: () => import(/* webpackChunkName: "components-tabs" */ '../views/services/checkin.vue')
     },
     {
         path: '/services/invoice',

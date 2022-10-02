@@ -4,6 +4,9 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import expressPino from 'express-pino-logger';
 import pino from 'pino';
+import apiRoute from './api';
+
+require('./db');
 
 import { ignoreFavicon } from './utils';
 
@@ -26,6 +29,8 @@ async function create() {
 
   // configure nonFeature
   app.use(ignoreFavicon);
+
+  app.use('/api', apiRoute);
 
   // root route - serve static file
   app.use(express.static(path.join(__dirname, '../public/')));
