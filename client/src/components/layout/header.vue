@@ -193,7 +193,7 @@
                             <b-media class="media">
                                 <template #aside>
                                     <div class="avatar avatar-xl">
-                                        <span class="avatar-title rounded-circle">KY</span>
+  <span class="avatar-title rounded-circle">KY</span>
                                     </div>
                                 </template>
                                 <h5 class="usr-name">Kara Young</h5>
@@ -213,7 +213,7 @@
                             <b-media class="media">
                                 <template #aside>
                                     <div class="avatar avatar-xl">
-                                        <span class="avatar-title rounded-circle">OG</span>
+  <span class="avatar-title rounded-circle">OG</span>
                                     </div>
                                 </template>
                                 <h5 class="usr-name">Oscar Garner</h5>
@@ -246,21 +246,21 @@
                             <b-media class="server-log">
                                 <template #aside>
                                     <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-server"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="feather feather-server"
                                     >
-                                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                                        <line x1="6" y1="6" x2="6" y2="6"></line>
-                                        <line x1="6" y1="18" x2="6" y2="18"></line>
+  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+  <line x1="6" y1="6" x2="6" y2="6"></line>
+  <line x1="6" y1="18" x2="6" y2="18"></line>
                                     </svg>
                                 </template>
                                 <div class="data-info">
@@ -270,19 +270,19 @@
 
                                 <div class="icon-status">
                                     <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-x"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="feather feather-x"
                                     >
-                                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+  <line x1="18" y1="6" x2="6" y2="18"></line>
+  <line x1="6" y1="6" x2="18" y2="18"></line>
                                     </svg>
                                 </div>
                             </b-media>
@@ -292,18 +292,18 @@
                             <b-media>
                                 <template #aside>
                                     <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-heart"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="feather feather-heart"
                                     >
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                                     </svg>
                                 </template>
                                 <div class="data-info">
@@ -313,19 +313,19 @@
 
                                 <div class="icon-status">
                                     <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-x"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="feather feather-x"
                                     >
-                                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                                        <line x1="6" y1="6" x2="18" y2="18"></line>
+  <line x1="18" y1="6" x2="6" y2="18"></line>
+  <line x1="6" y1="6" x2="18" y2="18"></line>
                                     </svg>
                                 </div>
                             </b-media>
@@ -335,22 +335,22 @@
                             <b-media class="file-upload">
                                 <template #aside>
                                     <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-file-text"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="feather feather-file-text"
                                     >
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                        <polyline points="14 2 14 8 20 8"></polyline>
-                                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                                        <polyline points="10 9 9 9 8 9"></polyline>
+  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+  <polyline points="14 2 14 8 20 8"></polyline>
+  <line x1="16" y1="13" x2="8" y2="13"></line>
+  <line x1="16" y1="17" x2="8" y2="17"></line>
+  <polyline points="10 9 9 9 8 9"></polyline>
                                     </svg>
                                 </template>
                                 <div class="data-info">
@@ -360,18 +360,18 @@
 
                                 <div class="icon-status">
                                     <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        stroke-width="2"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="feather feather-check"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class="feather feather-check"
                                     >
-                                        <polyline points="20 6 9 17 4 12"></polyline>
+  <polyline points="20 6 9 17 4 12"></polyline>
                                     </svg>
                                 </div>
                             </b-media>
@@ -459,6 +459,24 @@
                   <circle cx="12" cy="7" r="4"></circle></svg
                 >&nbsp;<font color="white">{{ getWalletShortAddress }}</font>
               </template>
+              <b-dropdown-item @click="openProfile">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-book"
+              >
+                  <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                  <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+                {{ $t("profile") }}
+              </b-dropdown-item>
               <b-dropdown-divider></b-dropdown-divider>
               <b-dropdown-item @click="disconnect">
                 <svg
@@ -1434,10 +1452,18 @@
       </div>
     </div>
     <!--  END TOPBAR  -->
+    <b-modal ref="profileModal" size="xl" centered>
+      <ProfileModal />
+      <template #modal-footer>
+          <div></div>
+        </template>
+      </b-modal>
   </div>
 </template>
 <script>
 import VueMetamask from "vue-metamask"
+
+import ProfileModal from "@/views/components/profileModal.vue"
 
 import ethers from "@/config/ethers.helper"
 
@@ -1453,6 +1479,7 @@ import {
 export default {
   data() {
     return {
+      isProfileOpened: false,
       isConnecting: false,
       wallet: {
         message: "",
@@ -1469,13 +1496,17 @@ export default {
     }
   },
   components: {
-    VueMetamask
-  },
+    VueMetamask,
+    ProfileModal
+},
   mounted() {
     this.selectedLang = this.$appSetting.toggleLanguage()
     this.toggleMode("dark")
   },
   methods: {
+    openProfile(){
+      this.$refs["profileModal"].show()
+    },
     isConnected() {
       const address = localStorage.getItem(WALLET_ADDRESS)
       if (address === undefined || address === "") {

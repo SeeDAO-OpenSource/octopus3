@@ -2,7 +2,7 @@ import './config/dotenv';
 import logger from './config/pino';
 import server from './server';
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 
 server
   .create()

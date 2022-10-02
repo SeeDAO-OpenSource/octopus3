@@ -12,15 +12,13 @@ const API_ERROR_START = 260;
 const ApiService = {
   init() {
     Vue.use(VueAxios, axios);
-    console.log('Vue.axios::', Vue.axios);
-    Vue.axios.defaults.baseURL = "http://localhost:3030"; // 'http://localhost:3030', 'http://server.seedao.xyz:3030';
+    Vue.axios.defaults.baseURL = "http://localhost:3000"; // 'http://localhost:3000', 'https://seedao.herokuapp.com';
   },
 
   /**
    * Set the default HTTP request headers
    */
   setHeader() {
-    console.log('Vue.axios::', Vue.axios);
     Vue.axios.defaults.headers.common[
       "Authorization"
     ] = `${JwtService.getToken()}`;
@@ -33,7 +31,6 @@ const ApiService = {
    */
   get(resource, slug = "") {
     return new Promise((resolve, reject) => {
-      ApiService.setHeader();
       Vue.axios.get(`${resource}/${slug}`).then(res => {
         console.log("res",res);
         if (res.data.status < API_ERROR_START) {
@@ -53,7 +50,6 @@ const ApiService = {
    */
   post(resource, params) {
     return new Promise((resolve, reject) => {
-      ApiService.setHeader();
       Vue.axios.post(`${resource}`, params).then(res => {
         // console.log("res",res);
         if (res.data.status < API_ERROR_START) {
@@ -74,7 +70,6 @@ const ApiService = {
    */
   update(resource, slug, params) {
     return new Promise((resolve, reject) => {
-      ApiService.setHeader();
       Vue.axios.put(`${resource}/${slug}`, params).then(res => {
         // console.log("res",res);
         if (res.data.status < API_ERROR_START) {
@@ -94,7 +89,6 @@ const ApiService = {
    */
   put(resource, params) {
     return new Promise((resolve, reject) => {
-      ApiService.setHeader();
       Vue.axios.put(`${resource}`, params).then(res => {
         // console.log("res",res);
         if (res.data.status < API_ERROR_START) {
@@ -113,7 +107,6 @@ const ApiService = {
    */
   delete(resource) {
     return new Promise((resolve, reject) => {
-      ApiService.setHeader();
       Vue.axios.delete(resource).then(res => {
         // console.log("res",res);
         if (res.data.status < API_ERROR_START) {
