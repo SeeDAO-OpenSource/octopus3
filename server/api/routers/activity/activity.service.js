@@ -1,4 +1,3 @@
-const P = require('pino');
 const activityModel = require('./activity.model');
 
 module.exports = {
@@ -14,7 +13,6 @@ module.exports = {
       0,
       now.getTime() - 60 * 60 * 1000
     );
-    console.log('results::', results);
     return results;
   },
 

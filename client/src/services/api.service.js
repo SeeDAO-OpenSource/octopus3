@@ -1,9 +1,10 @@
-import Vue from "vue";
-import axios from "axios";
-import VueAxios from "vue-axios";
-import JwtService from "./jwt.service";
+import Vue from 'vue';
+import axios from 'axios';
+import VueAxios from 'vue-axios';
+import JwtService from './jwt.service';
 
-export const API_KEYWORD = "9UuqrXa9MhV5n4GC";
+const SERVER_BASE_URL = 'http://localhost:3000'; // 'http://localhost:3000', 'https://seedao.herokuapp.com';
+
 const API_ERROR_START = 260;
 
 /**
@@ -12,7 +13,7 @@ const API_ERROR_START = 260;
 const ApiService = {
   init() {
     Vue.use(VueAxios, axios);
-    Vue.axios.defaults.baseURL = "http://localhost:3000"; // 'http://localhost:3000', 'https://seedao.herokuapp.com';
+    Vue.axios.defaults.baseURL = SERVER_BASE_URL;
   },
 
   /**
@@ -20,7 +21,7 @@ const ApiService = {
    */
   setHeader() {
     Vue.axios.defaults.headers.common[
-      "Authorization"
+      'Authorization'
     ] = `${JwtService.getToken()}`;
   },
   /**
@@ -29,16 +30,20 @@ const ApiService = {
    * @param slug
    * @returns {*}
    */
-  get(resource, slug = "") {
+  get(resource, slug = '') {
     return new Promise((resolve, reject) => {
-      Vue.axios.get(`${resource}/${slug}`).then(res => {
-        console.log("res",res);
-        if (res.data.status < API_ERROR_START) {
-          resolve(res);
-        } else {
-          reject(res);
-        }
-      });
+      this.setHeader()
+      Vue.axios
+        .get(`${resource}/${slug}`)
+        .then((res) => {
+          console.log('res', res);
+          if (res.data.status < API_ERROR_START) {
+            resolve(res);
+          } else {
+            reject(res);
+          }
+        })
+        .catch((error) => reject(error));
     });
   },
 
@@ -50,14 +55,18 @@ const ApiService = {
    */
   post(resource, params) {
     return new Promise((resolve, reject) => {
-      Vue.axios.post(`${resource}`, params).then(res => {
-        // console.log("res",res);
-        if (res.data.status < API_ERROR_START) {
-          resolve(res);
-        } else {
-          reject(res);
-        }
-      });
+      this.setHeader()
+      Vue.axios
+        .post(`${resource}`, params)
+        .then((res) => {
+          // console.log("res",res);
+          if (res.data.status < API_ERROR_START) {
+            resolve(res);
+          } else {
+            reject(res);
+          }
+        })
+        .catch((error) => reject(error));
     });
   },
 
@@ -70,14 +79,18 @@ const ApiService = {
    */
   update(resource, slug, params) {
     return new Promise((resolve, reject) => {
-      Vue.axios.put(`${resource}/${slug}`, params).then(res => {
-        // console.log("res",res);
-        if (res.data.status < API_ERROR_START) {
-          resolve(res);
-        } else {
-          reject(res);
-        }
-      });
+      this.setHeader()
+      Vue.axios
+        .put(`${resource}/${slug}`, params)
+        .then((res) => {
+          // console.log("res",res);
+          if (res.data.status < API_ERROR_START) {
+            resolve(res);
+          } else {
+            reject(res);
+          }
+        })
+        .catch((error) => reject(error));
     });
   },
 
@@ -89,14 +102,18 @@ const ApiService = {
    */
   put(resource, params) {
     return new Promise((resolve, reject) => {
-      Vue.axios.put(`${resource}`, params).then(res => {
-        // console.log("res",res);
-        if (res.data.status < API_ERROR_START) {
-          resolve(res);
-        } else {
-          reject(res);
-        }
-      });
+      this.setHeader()
+      Vue.axios
+        .put(`${resource}`, params)
+        .then((res) => {
+          // console.log("res",res);
+          if (res.data.status < API_ERROR_START) {
+            resolve(res);
+          } else {
+            reject(res);
+          }
+        })
+        .catch((error) => reject(error));
     });
   },
 
@@ -107,16 +124,20 @@ const ApiService = {
    */
   delete(resource) {
     return new Promise((resolve, reject) => {
-      Vue.axios.delete(resource).then(res => {
-        // console.log("res",res);
-        if (res.data.status < API_ERROR_START) {
-          resolve(res);
-        } else {
-          reject(res);
-        }
-      });
+      this.setHeader()
+      Vue.axios
+        .delete(resource)
+        .then((res) => {
+          // console.log("res",res);
+          if (res.data.status < API_ERROR_START) {
+            resolve(res);
+          } else {
+            reject(res);
+          }
+        })
+        .catch((error) => reject(error));
     });
-  }
+  },
 };
 
 export default ApiService;

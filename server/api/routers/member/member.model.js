@@ -1,39 +1,17 @@
-const { Activity } = require('./activity.schema');
+const { Member } = require('./member.schema');
 
-async function addParticipant(id, wallet) {
-  const now = new Date();
-  return await Activity.findOneAndUpdate(
-    { _id: id },
-    {
-      $addToSet: {
-        participants: {
-          updated: now.getTime(),
-          wallet: wallet,
-        },
-      },
-    },
-    { new: true, upsert: true }
-  );
+async function findMemberByWallet(wallet) {
+  return await Member.findOne({ wallet });
 }
-
-async function findActivity(id) {
-  return await Activity.findOne({ _id: id });
-}
-
-async function findActivityAfter(afterStart, afterEnd) {
-  const activities = await Activity.find({
-    start: { $gte: afterStart },
-    end: { $gte: afterEnd },
-  });
-  return activities;
-}
-
-async function createActivity(activity) {
-  console.log('model/ activity::', activity);
-  const created = await new Activity(activity).save();
-  console.log('created::', created);
-  await Activity.findOne(
-    { subject: activity.subject, start: activity.start, end: activity.end },
+async function createMemberByWallet(wallet) {
+  const now = new Date().getTime();
+  await new Member({
+    wallet,
+    created: now,
+    updated: now,
+  }).save();
+  await Member.findOne(
+    { wallet, created: now, updated: now },
     (err, result) => {
       if (err) return console.error(err);
       return result;
@@ -41,10 +19,49 @@ async function createActivity(activity) {
   );
 }
 
+async function updateMemberDiscordByWallet(wallet, query) {
+  const now = new Date().getTime();
+  const discord = {
+    id: query.id,
+    username: query.username,
+    discriminator: query.discriminator,
+    avatar: query.avatar,
+  };
+  const result = await Member.findOneAndUpdate(
+    { wallet },
+    {
+      discord,
+      updated: now,
+      lastLogin: now,
+    },
+    { new: true }
+  );
+  return result;
+}
+
+async function updateMemberByWallet(wallet, query) {
+  const result = await Member.findOneAndUpdate({ wallet }, query, {
+    new: true,
+  });
+  return result;
+}
+
+async function updateNonce(wallet, nonce) {
+  await Member.findOneAndUpdate(
+    { wallet },
+    { nonce },
+    { new: true },
+    (err, result) => {
+      if (err) return console.error(err);
+      return result;
+    }
+  );
+}
 
 module.exports = {
-  findActivity,
-  findActivityAfter,
-  createActivity,
-  addParticipant,
+  findMemberByWallet,
+  createMemberByWallet,
+  updateMemberDiscordByWallet,
+  updateMemberByWallet,
+  updateNonce,
 };
