@@ -6,6 +6,7 @@ import activity from './activity.module';
 import wallet from './wallet.module';
 import treasury from './treasury.module';
 import governor from './governor.module';
+import auth from './auth.module';
 
 Vue.use(Vuex);
 
@@ -95,6 +96,7 @@ export default new Vuex.Store({
         wallet,
         treasury,
         governor,
-        activity
+        activity,
+        auth
     }
 });

@@ -3,13 +3,19 @@ const db = require('../../../db');
 const MEMBER_MODEL_NAME = 'member';
 
 const memberSchema = db.Schema({
-  name: String,
+  nickname: String,
   wallet: String,
   created: Number,
   updated: Number,
   lastLogin: Number,
   email: String,
-  discordId: String,
+  nonce: Number,
+  discord: {
+    id: String,
+    username: String,
+    discriminator: String,
+    avatar: String,
+  },
   roles: [{ id: String, name: String }],
   tags: [{ id: String, name: String }],
   intro: {

@@ -31,6 +31,11 @@ const routes = [
         name: 'my-badges',
         component: () => import(/* webpackChunkName: "components-tabs" */ '../views/home/myBadges.vue')
     },
+    {
+        path: '/auth/discord',
+        name: 'discord-auth',
+        component: () => import(/* webpackChunkName: "components-tabs" */ '../views/home/authDiscord.vue')
+    },
 
     // Services
     {

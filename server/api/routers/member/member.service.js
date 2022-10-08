@@ -1,45 +1,70 @@
-const P = require('pino');
-const activityModel = require('./activity.model');
+const memberModel = require('./member.model');
+const memberUtils = require('./member.utils');
 
 module.exports = {
-  createActivity: async (activity) => {
-    console.log('activity:', activity);
-    const results = await activityModel.createActivity(activity);
-    return results;
+  discordLogin: async (data) => {
+    const member = await memberModel.updateMemberDiscordByWallet(
+      data.wallet,
+      data.discord
+    );
+    return { member };
   },
 
-  getUpcomingActivity: async () => {
-    const now = new Date();
-    const results = await activityModel.findActivityAfter(
-      0,
-      now.getTime() - 60 * 60 * 1000
-    );
-    console.log('results::', results);
-    return results;
+  signWallet: async (wallet) => {
+    const results = await memberModel.findMemberByWallet(wallet.wallet);
+    if (results === null || results === undefined) {
+      await memberModel.createMemberByWallet(wallet.wallet);
+    }
+    const nonce = memberUtils.randomNonce();
+    await memberModel.updateNonce(wallet.wallet, nonce);
+    const member = await memberModel.findMemberByWallet(wallet.wallet);
+    return { nonce: member.nonce };
   },
 
-  checkinActivity: async (checkin) => {
-    const activity = await activityModel.findActivity(checkin.activityId);
-    const found = activity.participants.find(
-      (p) => p.wallet === checkin.wallet
-    );
-    if (found !== undefined && found !== null) {
-      return {
-        isChecked: false,
-        result: { error: 'already-checkin' },
-      };
-    }
-    if (String(activity.checkinCode) === String(checkin.checkinCode)) {
-      const result = await activityModel.addParticipant(
-        activity._id,
-        checkin.wallet
-      );
-      return { isChecked: true, result: { error: '', ...result } };
-    } else {
-      return {
-        isChecked: false,
-        result: { error: 'checkin-code-incorrect' },
-      };
-    }
+  walletLogin: (data) => {
+    return new Promise((resolve, reject) => {
+      memberUtils
+        .verifyNonce(data.msg, data.wallet, data.sig)
+        .then(() => {
+          const token = memberUtils.getJWT(data.wallet);
+          const now = new Date().getTime();
+          memberModel
+            .updateMemberByWallet(data.wallet, { lastLogin: now })
+            .then((member) => {
+              resolve({ member, token });
+            })
+            .catch((error) => {
+              reject(error);
+            });
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  },
+
+  memberUpdate: (wallet, query) => {
+    return new Promise((resolve, reject) => {
+      memberModel
+        .updateMemberByWallet(wallet, query)
+        .then((member) => {
+          resolve(member);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  },
+
+  validateToken: (auth) => {
+    return new Promise((resolve, reject) => {
+      const tokenArr = auth.split(' ');
+      const token = tokenArr[1];
+      const decoded = memberUtils.verifyJWT(token);
+      memberModel
+        .findMemberByWallet(decoded.wallet)
+        .then(() => resolve({ token }))
+        .catch(() => reject(new Error('token is invalid.')));
+    });
   },
 };
