@@ -255,6 +255,12 @@
             <ul class="collapse submenu list-unstyled show">
               <router-link
                 tag="li"
+                to="/projects/add"
+                @click.native="toggleMobileMenu"
+                ><a>{{ $t("project-add") }}</a></router-link
+              >
+              <router-link
+                tag="li"
                 to="/projects/credits"
                 @click.native="toggleMobileMenu"
                 ><a>{{ $t("project-credits") }}</a></router-link
